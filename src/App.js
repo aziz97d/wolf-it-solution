@@ -48,25 +48,25 @@ function App() {
           <PrivateRoute exact path="/dashboard/bookingList">
             <BookingList></BookingList>
           </PrivateRoute>
-          <Route exact path="/dashboard/review">
+          <PrivateRoute exact path="/dashboard/review">
             <Review></Review>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/admin">
+          <PrivateRoute exact path="/admin">
             <OrderList></OrderList>
-          </Route>
-          <Route path="/admin/orderList">
+          </PrivateRoute>
+          <PrivateRoute path="/admin/orderList">
             <OrderList></OrderList>
-          </Route>
-          <Route path="/admin/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/admin/addService">
             <AddService></AddService>
-          </Route>
-          <Route path="/admin/makeAdmin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin/makeAdmin">
             <MakeAdmin></MakeAdmin>
-          </Route>
-          <Route path="/admin/manageService">
+          </PrivateRoute>
+          <PrivateRoute path="/admin/manageService">
             <ManageService></ManageService>
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

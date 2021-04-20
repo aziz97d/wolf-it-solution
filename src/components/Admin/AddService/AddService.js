@@ -59,7 +59,7 @@ const AddService = () => {
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 {/* <label for="inputEmail4">Service Title</label> */}
-                                <input {...register("serviceTitle", { required: true })} type="text" class="form-control" id="inputEmail4" placeholder="Email" />
+                                <input {...register("serviceTitle", { required: true })} type="text" class="form-control" id="inputEmail4" placeholder="Service Title" />
                                 {errors.serviceTitle && <span className='text-danger'>This field is required</span>}
                             </div>
                         </div>
