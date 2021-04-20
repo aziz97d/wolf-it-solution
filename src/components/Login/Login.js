@@ -74,18 +74,19 @@ const Login = () => {
                 </div>
                 <div className="col-md-6 d-flex flex-column text-center justify-content-center">
 
-                    <form action="" className="login-form">
+                    <form className="login-form">
                         <h4 className="login-title">Login</h4>
                         <input type="text" placeholder="Email" />
 
                         <input type="password" placeholder="Password" />
 
-                        <button className="btn-login">Login</button>
-
 
                         {/* <Link to="/">Home</Link> */}
 
                     </form>
+                    <div className="social-login">
+                        <button className="btn-login">Login</button>
+                    </div>
                     <div className="social-login">
                         <button onClick={googleSignIn} className="btn-login">Google Sign In</button>
                     </div>
