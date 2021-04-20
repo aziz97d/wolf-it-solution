@@ -1,0 +1,24 @@
+.choose-us-card{
+    border-radius: 5px;
+    box-shadow: 0 5px 30px rgb(209, 218, 226);
+    height: 18rem;
+    transition: 0.5s;
+}
+.choose-us-card:hover {
+    transform: translateY(-2%);
+}
+.choose-us-card:hover .choose-us-icon{
+    color: #EF4166;
+    background-color: unset;
+    transition: 0.5s;
+    transform: translateY(-10%);
+}
+.choose-us-icon{
+    transform: translateY(-50%);
+    background-color: #EF4166;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 100px;
+    color: ghostwhite;
+    transition: 0.5s;
+}

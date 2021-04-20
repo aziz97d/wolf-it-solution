@@ -1,0 +1,43 @@
+.sidebar{
+    height: 100vh;
+    font-size: 20px;
+    font-weight: 600;
+    /* background-image: url('../../../images/adminBackgorund.jpg'); */
+    background-color: lavenderblush;
+    
+    transition: all ease-in-out 0.5s;
+}
+
+.sidebar .brand-logo img{
+    height: 60px;
+    margin: 20px 0;
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.sidebar ul .menu-item{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 10px;
+    background-color: rgba(255, 226, 214, 0.4);
+    margin-top: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(104, 95, 91, 0.4);
+    
+}
+.sidebar ul .menu-item:hover{
+    border: indianred 1px solid;
+}
+.sidebar .menu-item{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.sidebar .menu-item img{
+    height: 25px;
+    width: 25px; 
+    margin-right: 5px;
+}
