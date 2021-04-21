@@ -6,14 +6,16 @@ const OrderList = () => {
 
     const [bookingsList, setBookingList] = useState([]);
 
-    useEffect(() => {
-
+    const loadBookings =() =>{
         fetch('https://glacial-woodland-36834.herokuapp.com/getAllBookings')
-            .then(res => res.json())
-            .then(data => setBookingList(data))
+        .then(res => res.json())
+        .then(data => setBookingList(data))
+    }
+    useEffect(() => {
+        loadBookings()
 
     }, [])
-    console.log(bookingsList);
+
 
     return (
         <div className="row m-0">
@@ -34,7 +36,7 @@ const OrderList = () => {
                         </thead>
                         <tbody>
                             {
-                                bookingsList.map(booking => <OrderListItem booking={booking}></OrderListItem>)
+                                bookingsList.map(booking => <OrderListItem loadBookings={loadBookings} booking={booking}></OrderListItem>)
                             }
                         </tbody>
                     </table>
