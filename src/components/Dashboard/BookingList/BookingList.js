@@ -6,10 +6,10 @@ import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
 const BookingList = () => {
 
     const [bookingList, setBookingList] = useState([]);
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
         //console.log(loggedInUser)
-        fetch("https://glacial-woodland-36834.herokuapp.com/getBookingsByEmail?email="+loggedInUser.email)
+        fetch("https://glacial-woodland-36834.herokuapp.com/getBookingsByEmail?email=" + loggedInUser.email)
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, [loggedInUser])
@@ -20,24 +20,14 @@ const BookingList = () => {
             <DashboardSidebar></DashboardSidebar>
             <div className="col-md-10 px-5">
                 <div className="mt-4">
-                    <h2>Order List</h2>
+                    <h2>Booking List</h2>
                 </div>
-                <div className="order-table py-4">
-                    <table className="table">
-                        <thead>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Service</th>
-                            <th>Pay With</th>
-                            <th>Status</th>
-                        </thead>
-                        <tbody>
-                            {
-                                bookingList.map(booking => <BookingCard booking={booking}></BookingCard>)
-                            }
-                        </tbody>
-                    </table>
+                <div className="row py-4">
+                    {
+                        bookingList.map(booking => <BookingCard booking={booking}></BookingCard>)
+                    }
                 </div>
+                
             </div>
         </div>
     );

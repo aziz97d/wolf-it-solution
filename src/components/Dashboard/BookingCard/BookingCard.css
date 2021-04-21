@@ -1,0 +1,9 @@
+.service-status{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    background-color: #EF4166;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 25px;
+}
